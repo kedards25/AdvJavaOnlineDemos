@@ -1,0 +1,27 @@
+MVC
+Model View Controller=>Design pattern->not a java feature
+
+Model(java class)=>always mapped with DB
+	POJO=>Plain Old Java Object
+		private properties
+		no-arg constructor
+		parameterised constructor
+		getters and setters of properties
+		toString()
+
+
+View (html/jsp)
+	Client Side
+		accepting input/display output
+		accept values from user and pass the values to controller
+
+Controller(servlet)
+	Controls the flow of the application
+	it takes the decision of what is to be done with values received
+	has the main logic
+
+
+useBean
+POJO in terms of JSP is referred to as Bean
+
+	

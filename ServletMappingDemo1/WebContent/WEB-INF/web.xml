@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ServletMappingDemo1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>home.html</welcome-file>
+	</welcome-file-list>
+	<!-- Declaration of servlet 1 -->
+	<servlet>
+		<servlet-name>SampleServlets</servlet-name>
+		<servlet-class>com.learning.servlets.SampleServlets</servlet-class>
+		<init-param>
+			<param-name>sampleValue</param-name>
+			<param-value>57</param-value>
+		</init-param>
+	</servlet>
+	<!-- Mapping of servlet 1 -->
+	<servlet-mapping>
+		<servlet-name>SampleServlets</servlet-name>
+		<url-pattern>/sample</url-pattern>
+		<url-pattern>/sample/abc</url-pattern>
+		<url-pattern>/sample/*</url-pattern>
+		<url-pattern>/demo</url-pattern>
+	</servlet-mapping>
+
+	<!-- Declaration of servlet 2 -->
+ 	<servlet>
+		<servlet-name>SampleServlet2</servlet-name>
+		<servlet-class>com.learning.servlets.SampleServlet2</servlet-class>
+	</servlet>
+
+	<!-- Mapping of servlet 2 -->
+	<servlet-mapping>
+		<servlet-name>SampleServlet2</servlet-name>
+		<url-pattern>/SampleServlet2</url-pattern>
+	</servlet-mapping>
+
+
+
+	<context-param>
+		<param-name>globalValue</param-name>
+		<param-value>84</param-value>
+	</context-param>
+
+</web-app>
